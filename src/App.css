@@ -1,0 +1,71 @@
+@import url(https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;600&display=swap);
+
+* {
+margin: 0;
+padding: 0;
+text-align: center;
+align-items: center;
+background-color: #ffffff;
+font-family: Kanit;
+}
+
+#coin {
+  position: relative;
+  margin: 0 auto;
+  width: 15rem;
+  height: 15rem;
+  transform: 1s ease-in;
+  transform-style: preserve-3d;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+#coin div {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.side1 {
+  background-color: #ffee00;
+  z-index: 1;
+}
+
+.side2 {
+  background-color: #e7c500;
+  transform: rotateY(180deg);
+}
+
+#coin.heads {
+  animation: flipHeads 3s ease-out forwards;
+}
+
+#coin.tails {
+  animation: flipTails 3s ease-out forwards;
+}
+
+/*keyframes flipHeads {
+  from { transform: rotateY(0);}
+  to {transform: rotateY(1800deg);}
+}
+
+keyframes flipTais {
+  from { transform: rotateY(0);}
+  to {transform: rotateY(1620deg);}
+}*/
+
+button {
+  width: 10%;
+  height: 2rem;
+  cursor: pointer;
+  border: #636363 solid;
+  border-radius: 5px;
+  margin-top: 1rem;
+}
+
+button:hover {
+  background: #8d8d8d;
+  transition: 0.3s ease-in;
+}
